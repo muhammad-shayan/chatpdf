@@ -21,7 +21,7 @@ export default function Home() {
             Quill allows you to have conversations with any PDF document. Simply
             upload your file and start asking questions right away.
           </p>
-          <Link href="/dashborad" target="_blank" className="mt-5">
+          <Link href="/dashboard" target="_blank" className="mt-5">
             <Button size="lg" className="text-lg">
               Get Started <ArrowRight className="w-5 h-5 ml-5" />
             </Button>
