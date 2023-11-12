@@ -26,13 +26,13 @@ const Page = async ({ params }: DashboardProps) => {
   });
 
   return (
-    <div className="h:[calc(100vh-3.5rem] max-w-8xl w-full lg:flex">
-      <div className="px-4 py-6 sm:px-6 lg:grow">
+    <div className="h-[calc(100vh-3.5rem] max-w-8xl w-full lg:flex">
+      <div className="px-4 py-6 sm:px-6 lg:flex-1">
         <PdfRenderer url={file?.url} />
       </div>
 
-      <div className="shrink-0 flex-[0.75] border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
-        <ChatWrapper />
+      <div className="shrink-0 flex-[0.75] border-t border-gray-200 lg:w-200 lg:border-l lg:border-t-0">
+        <ChatWrapper fileId={fileid} />
       </div>
     </div>
   );

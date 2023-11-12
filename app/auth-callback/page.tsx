@@ -21,7 +21,7 @@ const AuthCallback = () => {
       }
     },
     retry: true,
-    retryDelay: 5000,
+    retryDelay: 500,
   });
 
   return (
