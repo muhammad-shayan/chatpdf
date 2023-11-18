@@ -8,6 +8,7 @@ import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import MobileNav from "./MobileNav";
+import UserAccountNav from "./UserAccountNav";
 
 const Navbar = () => {
   const { getUser } = getKindeServerSession();
@@ -19,7 +20,21 @@ const Navbar = () => {
           Quill.
         </Link>
 
-        <MobileNav isAuth={!!user} />
+        {!user && <MobileNav />}
+        {user && (
+          <div className="sm:hidden">
+            {/* @ts-expect-error Async Server Component */}
+            <UserAccountNav
+              name={
+                !user.given_name || !user.family_name
+                  ? "Your Account"
+                  : `${user.given_name} ${user.family_name}`
+              }
+              email={user.email ?? ""}
+              imageUrl={user.picture ?? ""}
+            />
+          </div>
+        )}
 
         <div className="hidden sm:flex space-x-4 items-center">
           {!user ? (
@@ -47,11 +62,16 @@ const Navbar = () => {
               >
                 Dashboard
               </Link>
-              <LogoutLink
-                className={buttonVariants({ variant: "ghost", size: "sm" })}
-              >
-                Logout
-              </LogoutLink>
+              {/* @ts-expect-error Async Server Component */}
+              <UserAccountNav
+                name={
+                  !user.given_name || !user.family_name
+                    ? "Your Account"
+                    : `${user.given_name} ${user.family_name}`
+                }
+                email={user.email ?? ""}
+                imageUrl={user.picture ?? ""}
+              />
             </>
           )}
         </div>
