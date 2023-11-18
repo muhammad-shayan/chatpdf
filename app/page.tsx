@@ -10,7 +10,7 @@ export default function Home() {
         <div className="max-w-screen-xl w-full mx-auto mt-28 px-2.5 sm:px-20 sm:mt-40 mb-12 flex flex-col items-center justify-center text-center">
           <div className=" px-7 py-2 mb-4 rounded-full border border-gray-200 shadow-md backdrop-blur bg-white transition-all hover:border-gray-300 hover:bg-white/50">
             <p className="text-sm font-semibold text-gray-700">
-              Quill is public now!
+              chatPDF is public now!
             </p>
           </div>
           <div className="max-w-4xl text-5xl md:text-6xl lg:text-7xl font-bold">
@@ -18,8 +18,8 @@ export default function Home() {
             seconds
           </div>
           <p className="mt-5 sm:text-lg text-zinc-700 max-w-prose">
-            Quill allows you to have conversations with any PDF document. Simply
-            upload your file and start asking questions right away.
+            chatPDF allows you to have conversations with any PDF document.
+            Simply upload your file and start asking questions right away.
           </p>
           <Link href="/dashboard" className="mt-5">
             <Button size="lg" className="text-lg">
@@ -79,7 +79,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 text-lg text-gray-500">
                 Chatting to your PDF files has never been easier than with
-                Quill.
+                chatPDF.
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Home() {
                   Sign up for an account
                 </span>
                 <span className="mt-2 text-zinc-700">
-                  Either starting out with a free plan ot choose our{" "}
+                  Either starting out with a free plan or choose our{" "}
                   <Link
                     href="/pricing"
                     className="text-blue-700 underline underline-offset-2"
@@ -128,7 +128,7 @@ export default function Home() {
                   Start asking questions
                 </span>
                 <span className="mt-2 text-zinc-700">
-                  It&apos;s that simple. Try out Quill today - it really takes
+                  It&apos;s that simple. Try out chatPDF today - it really takes
                   less than a minute.
                 </span>
               </div>
