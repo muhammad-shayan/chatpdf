@@ -23,7 +23,7 @@ const Navbar = () => {
         {!user && <MobileNav />}
         {user && (
           <div className="sm:hidden">
-            {/* @ts-expect-error Async Server Component */}
+            {/* @ts-ignore */}
             <UserAccountNav
               name={
                 !user.given_name || !user.family_name
@@ -62,7 +62,7 @@ const Navbar = () => {
               >
                 Dashboard
               </Link>
-              {/* @ts-expect-error Async Server Component */}
+              {/* @ts-ignore */}
               <UserAccountNav
                 name={
                   !user.given_name || !user.family_name
